@@ -548,6 +548,10 @@ const int UIItemHorizontalSpace = 6;
         }
         return NO;
     }
+    
+    if ([self.delegate respondsToSelector: @selector(inputBarView:textViewDidChange:shouldChangeTextInRange:replacementText:)]) {
+        return  [self.delegate inputBarView:self textViewDidChange:textView shouldChangeTextInRange:range replacementText:text];
+    }
     return YES;
 }
 

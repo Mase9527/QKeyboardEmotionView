@@ -28,6 +28,10 @@ extern const int UIInputBarViewMinHeight;
 // 输入框文本变化
 - (void)inputBarView:(QInputBarView *)inputBarView textViewDidChange:(UITextView *)inputTextView;
 
+
+- (BOOL)inputBarView:(QInputBarView *)inputBarView textViewDidChange:(UITextView *)inputTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
+
+
 // 输入框的高度发生了改变（因为输入了值）
 - (void)inputBarView:(QInputBarView *)inputBarView inputTextView:(UITextView *)inputTextView heightDidChange:(CGFloat)changeValue becauseSendText:(BOOL)becauseSendText;
 
